@@ -1,0 +1,51 @@
+.choose {
+  background-color: $ColorLightGrayishBlue;
+  @include flex(column, center);
+  .choose-desc {
+    margin: 4rem 1.5rem;
+    text-align: center;
+    h1 {
+      margin-bottom: 1rem;
+    }
+    p {
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 42em) {
+  .choose {
+    .choose-desc {
+      margin: 4rem 5rem;
+      h1 {
+        padding: 0 4rem;
+      }
+      p {
+        padding: 0 4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 62em) {
+  .choose {
+    background-color: $ColorLightGrayishBlue;
+    @include flex(column, center);
+    align-items: flex-start;
+    .choose-desc {
+      margin: 4rem 0 2rem 4rem;
+      width: 600px;
+      text-align: left;
+      h1 {
+        margin-bottom: 1rem;
+        padding: 0;
+      }
+      p {
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+}

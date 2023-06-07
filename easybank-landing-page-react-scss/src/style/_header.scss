@@ -1,0 +1,112 @@
+main {
+  position: relative;
+  overflow-x: hidden;
+  .intro {
+    background-color: $ColorVeryLightGray;
+    position: relative;
+    display: grid;
+    padding: 0 6%;
+    padding-bottom: 3.1rem;
+    background-image: url(../assets/images/bg-intro-mobile.svg);
+    background-size: contain;
+    max-height: 635px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-position-y: -4.3rem;
+    img {
+      display: block;
+      position: absolute;
+      top: -27rem;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 90%;
+      max-width: 695px;
+      margin: auto;
+    }
+    .intro-content {
+      margin-top: 18rem;
+      text-align: center;
+      h1 {
+        margin: 1rem 0;
+      }
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 42em) {
+  main {
+    .intro {
+      background-position-y: -9.3rem;
+      img {
+        top: -34rem;
+        width: 80%;
+      }
+      .intro-content {
+        margin: 31rem 5rem 0 5rem;
+        h1 {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 62em) {
+  main {
+    .intro {
+      padding: 0px 6%;
+      height: 25rem;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+      background-image: url(../assets/images/bg-intro-desktop.svg);
+      background-position-x: 24rem;
+      background-position-y: -4.3rem;
+      background-size: 80vw 90vh;
+      img {
+        top: 0.9rem;
+        bottom: 0;
+        right: -37rem;
+        left: 0;
+        width: 50%;
+        margin: auto;
+      }
+      .intro-content {
+        width: 85%;
+        margin: 0;
+        text-align: left;
+        h1 {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 87em) {
+  main {
+    .intro {
+      height: 37rem;
+      background-position-x: 37rem;
+      background-position-y: -12rem;
+      background-size: 80vw 100vh;
+      img {
+        top: 0;
+        bottom: 0;
+        right: -60rem;
+        left: 0;
+        width: 50%;
+        margin: auto;
+      }
+      .intro-content {
+        width: 60%;
+      }
+    }
+  }
+}

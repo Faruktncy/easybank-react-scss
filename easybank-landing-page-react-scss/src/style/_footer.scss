@@ -1,0 +1,118 @@
+footer {
+  background-color: $ColorDarkBlue;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  .col-1 {
+    margin-top: 2.5rem;
+    @include flex(column, center);
+    gap: 1rem;
+    .social-media {
+      img {
+        margin-left: 1rem;
+      }
+    }
+  }
+  .col-2 {
+    @include flex(column, center);
+    ul {
+      text-align: center;
+      list-style: none;
+      li {
+        margin-bottom: 1rem;
+        color: $ColorLightGrayishBlue;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: $ColorLimeGreen;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+  .col-3 {
+    @include flex(column, center);
+    gap: 1rem;
+    p {
+      color: $ColorGrayishBlue;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
+
+@media (min-width: 62em) {
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 5rem;
+    .col-1 {
+      margin-top: 0;
+      @include flex(column, center);
+      align-items: flex-start;
+      gap: 1rem;
+      .social-media {
+        img {
+          margin-left: 1rem;
+        }
+      }
+    }
+    .col-2 {
+      @include flex(row, space-between);
+      ul {
+        text-align: left;
+        li {
+          margin: 0;
+          &:nth-child(1) {
+            margin-bottom: 1rem;
+          }
+          &:nth-child(2) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+    .col-3 {
+      @include flex(column, center);
+      align-items: flex-end;
+      gap: 1rem;
+    }
+  }
+}
+
+@media (min-width: 87em) {
+  footer {
+    .col-1 {
+      gap: 4rem;
+      img {
+        width: 12rem;
+      }
+      .social-media {
+        img {
+          width: 1.5rem;
+          color: $ColorLightGrayishBlue;
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: $ColorLimeGreen;
+            transition: 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+    .col-2 {
+      ul {
+        li {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .col-3 {
+      gap: 1.5rem;
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
